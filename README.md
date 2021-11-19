@@ -1,17 +1,18 @@
 ## Integration of deep learning radiomics and counts of circulating tumor cells (CTC) improves prediction of outcomes of early stage NSCLC patients 
 
-### 1. Survival curves and log-rank test. The analysis and curve plot are based on a MatLab package named MatSurv (https://github.com/aebergl/MatSurv)
+### 1. Survival curves and log-rank test. 
 
-### 1) Use **plot_km_curves_final.m** to show the Kaplan-Meier (K-M) curves built on our fusion recurrence prediction model, CTC measures, and the combination of them. They are group-level recurrence risk stratification;
-### 2) Use **plot_the_ctc_false_negative_survival_curves_final.m** to show the patient-level survival curves of all patients and the 6 CTC false negative (FN) patients; 
+The analysis and curve plot are based on a MatLab package named MatSurv (https://github.com/aebergl/MatSurv)
+1) Use **plot_km_curves_final.m** to show the Kaplan-Meier (K-M) curves built on our fusion recurrence prediction model, CTC measures, and the combination of them. They are group-level recurrence risk stratification;
+2) Use **plot_the_ctc_false_negative_survival_curves_final.m** to show the patient-level survival curves of all patients and the 6 CTC false negative (FN) patients; 
 
 ### 2. Deep learning recurrence prediction
 
-### 1) The network structure of our image-based model is **prediction_model.py**;
-### 2) And the trained parameters of this model is saved as **trained_model.pth**; 
-### 3) If you want to train a clinical feature based model, can build one using several fully connected layers;
-### 4) Loss function for the recurrence prediction is detailed in **loss_surv.py** (can refer to https://github.com/havakv/pycox, it's a great deep learning survival analysis project);
-### 5) If you want to build an fusion model, can send the image-based and clinical-based risk scores to a classic Cox regression model. Can use this Python package to do more survival analysis tasks (https://scikit-survival.readthedocs.io/en/stable/index.html);
+1) The network structure of our image-based model is **prediction_model.py**;
+2) And the trained parameters of this model is saved as **trained_model.pth**; 
+3) If you want to train a clinical feature based model, can build one using several fully connected layers;
+4) Loss function for the recurrence prediction is detailed in **loss_surv.py** (can refer to https://github.com/havakv/pycox, it's a great deep learning survival analysis project);
+5) If you want to build an fusion model, can send the image-based and clinical-based risk scores to a classic Cox regression model. Can use this Python package to do more survival analysis tasks (https://scikit-survival.readthedocs.io/en/stable/index.html);
 
 ### Reference
 [1] Kaplan, Edward L., and Paul Meier. "Nonparametric estimation from incomplete observations." Journal of the American statistical association 53.282 (1958): 457-481.
